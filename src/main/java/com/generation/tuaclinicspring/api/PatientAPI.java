@@ -68,6 +68,37 @@ public class PatientAPI {
 	}
 	
 	
+	@GetMapping("patients/surname/{ro}")
+	public List<Patient> getPatientBySurname(@PathVariable ("ro") String surname){
+		
+		return repo.findPatientBySurname(surname);
+	}
+	
+	
+	
+	@GetMapping("patients/gender/{m}")
+	public List<Patient> getPatientByGender(@PathVariable("m")String gender) {
+		
+		return repo.findPatientByGender(gender);
+		
+		
+	}
+	
+	@GetMapping("patients/age/{40}")
+	public List<Patient>getPatientByAge(@PathVariable("40") int age){
+		
+		return repo.findPatientByAge(age);
+	}
+		
+	
+	
+	@GetMapping("patients/name/{e}/surname/{m}")
+	public List<Patient>getPatientByNameAndSurname(@PathVariable("e") String name, @PathVariable("m")String surname){
+		return repo.findPatientByNameAndSurname(name, surname);
+	}
+	
+	
+	
 	
 
 }

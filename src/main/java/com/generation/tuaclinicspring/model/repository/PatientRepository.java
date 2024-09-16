@@ -14,8 +14,10 @@ public interface PatientRepository extends JpaRepository <Patient, Long> {
 
 	
 	
-	List<Patient> getPatientBySurname(String surname);
-	List<Patient> getPatientByGender (String gender);
+	List<Patient> findPatientBySurname(String surname);
+	List<Patient> findPatientByGender (String gender);
+	List<Patient> findPatientByAge (int age);
+	List<Patient> findPatientByNameAndSurname (String name, String surname);
 	
 	
 	
