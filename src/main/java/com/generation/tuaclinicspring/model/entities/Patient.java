@@ -10,17 +10,17 @@ public class Patient {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected int id;
+	protected long id;
 	
 	
 	protected int age;
 	protected String name, surname;
-	Gender gender;
+	String gender;
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public int getAge() {
@@ -41,12 +41,13 @@ public class Patient {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-	public Gender getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(Gender gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
 	
 	
 	

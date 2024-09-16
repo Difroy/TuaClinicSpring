@@ -2,8 +2,10 @@ package com.generation.tuaclinicspring.api;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -84,8 +86,8 @@ public class PatientAPI {
 		
 	}
 	
-	@GetMapping("/patients/age/{40}")
-	public List<Patient>getPatientByAge(@PathVariable("40") int age){
+	@GetMapping("/patients/age/{age}")
+	public List<Patient>getPatientByAge(@PathVariable("age") int age){
 		
 		return repo.findPatientByAge(age);
 	}
@@ -97,6 +99,19 @@ public class PatientAPI {
 		return repo.findPatientByNameAndSurname(name, surname);
 	}
 	
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Patient> getPatient (@PathVariable("id") long id){
+		
+		Optional<Patient> patientOptional = repo.findById(id);
+		
+		return patientOptional.isEmpty() ?
+				;
+		
+		
+		
+		
+	}
 	
 	
 	
