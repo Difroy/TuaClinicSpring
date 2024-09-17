@@ -27,6 +27,11 @@ public class Doctor
 	String name, surname;
 	Specialization specialization;
 	Gender gender;
+	
+	@OneToMany(mappedBy = "doctor")
+	RefreshCourse refreshCourse;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -63,6 +68,14 @@ public class Doctor
 	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
+	public RefreshCourse getRefreshCourse() {
+		return refreshCourse;
+	}
+	public void setRefreshCourse(RefreshCourse refreshCourse) {
+		this.refreshCourse = refreshCourse;
+	}
+	
+	
 	
 	
 	
