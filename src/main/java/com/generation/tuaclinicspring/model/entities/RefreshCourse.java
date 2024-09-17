@@ -1,5 +1,6 @@
 package com.generation.tuaclinicspring.model.entities;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,10 +14,13 @@ public class RefreshCourse {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 	
-	
-	
+	String course;
 	@ManyToOne
 	Doctor doctor;
+	
+	
+	
+	
 	
 	
 	
