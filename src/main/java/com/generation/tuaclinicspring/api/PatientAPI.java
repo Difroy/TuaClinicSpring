@@ -105,8 +105,7 @@ public class PatientAPI {
 		
 		Optional<Patient> patientOptional = repo.findById(id);
 		
-		return patientOptional.isEmpty() ?
-				;
+		return null;
 		
 		
 		
