@@ -63,7 +63,6 @@ Optional<Vaccination> vaccinationOptional = repo.findById(id);
 			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 		
-		
 	}
 	
 }
